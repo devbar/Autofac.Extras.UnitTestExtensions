@@ -1,6 +1,6 @@
 # Autofac.Extras.UnitTestExtensions
 
-Autofac is a game-changing framework for depedency injection, but not registered depedencies in constuctors made me angry. Time to invent a framework to integrate registration validation in unit testing.
+Autofac is a game-changing framework for depedency injection. But not registered depedencies in constructors made me angry. Time to invent a framework to integrate registration validation in unit testing.
 
 ```
 [Test]
