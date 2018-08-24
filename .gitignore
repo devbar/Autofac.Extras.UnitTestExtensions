@@ -1,0 +1,9 @@
+*.suo
+*.nupkg
+bin
+obj
+packages
+tools
+.vs
+*.user
+
