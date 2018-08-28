@@ -2,6 +2,10 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Version>1.0.0-beta</Version>
+    <Authors>Benjamin Kemner</Authors>
+    <Company>Devbar</Company>
   </PropertyGroup>
 
   <ItemGroup>

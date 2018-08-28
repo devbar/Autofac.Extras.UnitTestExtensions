@@ -1,5 +1,7 @@
 using System;
+using System.Collections.Generic;
 using System.Linq;
+using Autofac.Features.OwnedInstances;
 using NUnit.Framework;
 using Assert = Microsoft.VisualStudio.TestTools.UnitTesting.Assert;
 
@@ -8,6 +10,8 @@ namespace Autofac.Extras.UnitTestExtensions.UnitTest
     [TestFixture]
     public class ResolverTest
     {
+        #region Base Classes
+
         public interface IAnimal { string Name { get; } }
 
         public class Dog : IAnimal
@@ -51,7 +55,9 @@ namespace Autofac.Extras.UnitTestExtensions.UnitTest
 
             public string Name { get; }
         }
-        
+
+        #endregion Base Classes
+
         public class WellFormedZoo
         {
             public WellFormedZoo(Dog dog, Cat cat) {}
@@ -69,7 +75,31 @@ namespace Autofac.Extras.UnitTestExtensions.UnitTest
             }
         }
 
-        private IContainer CreateSutSimpleContainer()
+        public class LazyDogZoo
+        {
+            public LazyDogZoo(Lazy<Dog> lazyDog)
+            {
+
+            }
+        }
+
+        public class CatListZoo
+        {
+            public CatListZoo(IEnumerable<Cat> lazyDog)
+            {
+
+            }
+        }
+
+        public class OwnedCatZoo
+        {
+            public OwnedCatZoo(Owned<Cat> cat)
+            {
+
+            }
+        }
+
+        private static IContainer CreateSutSimpleContainer()
         {
             var containerBuilder = new ContainerBuilder();
 
@@ -79,6 +109,8 @@ namespace Autofac.Extras.UnitTestExtensions.UnitTest
             containerBuilder.RegisterType<WellFormedZoo>();
             containerBuilder.RegisterType<UnknownBirdZoo>();
             containerBuilder.RegisterType<FactoryDrivenZoo>();
+            containerBuilder.RegisterType<LazyDogZoo>();
+            containerBuilder.RegisterType<CatListZoo>();
 
             return containerBuilder.Build();
         }
@@ -88,7 +120,7 @@ namespace Autofac.Extras.UnitTestExtensions.UnitTest
         {
             var container = CreateSutSimpleContainer();
             var types = container.GetUnresolvableTypes().ToArray();
-            
+
             Assert.AreEqual(1, types.Count(), "UnresolvedTypes: " + string.Join(", ", types.Select(t => t.ToString())));
             Assert.AreEqual(nameof(UnknownBirdZoo), types[0].Name);
         }
