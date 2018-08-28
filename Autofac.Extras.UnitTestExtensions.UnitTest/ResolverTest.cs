@@ -111,6 +111,7 @@ namespace Autofac.Extras.UnitTestExtensions.UnitTest
             containerBuilder.RegisterType<FactoryDrivenZoo>();
             containerBuilder.RegisterType<LazyDogZoo>();
             containerBuilder.RegisterType<CatListZoo>();
+            containerBuilder.RegisterType<OwnedCatZoo>();
 
             return containerBuilder.Build();
         }
