@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using Autofac.Features.OwnedInstances;
 using NUnit.Framework;
-using Assert = Microsoft.VisualStudio.TestTools.UnitTesting.Assert;
 
 namespace Autofac.Extras.UnitTestExtensions.UnitTest
 {

@@ -3,9 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2003
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Autofac.Extras.UnitTestExtensions", "Autofac.Extras.UnitTestExtensions\Autofac.Extras.UnitTestExtensions.csproj", "{6DAF4140-B0DE-489E-9231-3BFF32BD65B6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Autofac.Extras.UnitTestExtensions", "Autofac.Extras.UnitTestExtensions\Autofac.Extras.UnitTestExtensions.csproj", "{6DAF4140-B0DE-489E-9231-3BFF32BD65B6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Autofac.Extras.UnitTestExtensions.UnitTest", "Autofac.Extras.UnitTestExtensions.UnitTest\Autofac.Extras.UnitTestExtensions.UnitTest.csproj", "{09665DE2-A5D1-4F86-9756-6F99077F823E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Autofac.Extras.UnitTestExtensions.UnitTest", "Autofac.Extras.UnitTestExtensions.UnitTest\Autofac.Extras.UnitTestExtensions.UnitTest.csproj", "{09665DE2-A5D1-4F86-9756-6F99077F823E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Cake", "Cake", "{5ADED713-A600-4517-A734-662FEEE3B068}"
+	ProjectSection(SolutionItems) = preProject
+		build.cake = build.cake
+		build.ps1 = build.ps1
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
