@@ -5,7 +5,8 @@
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <VersionPrefix>1.0.5</VersionPrefix>
     <Authors>Benjamin Kemner</Authors>
-    <Company>Devbar</Company>    
+    <Company>Devbar</Company>
+    <Version>1.5.0</Version>    
   </PropertyGroup>
 
   <ItemGroup>
